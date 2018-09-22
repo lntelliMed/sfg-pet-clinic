@@ -1,10 +1,8 @@
 package com.lntellimed.controllers;
 
+import com.lntellimed.services.GreetingServiceImpl;
 import org.junit.Before;
 import org.junit.Test;
-
-import com.lntellimed.controllers.ConstructorInjectedController;
-import com.lntellimed.services.GreetingServiceImpl;
 
 import static org.junit.Assert.assertEquals;
 
