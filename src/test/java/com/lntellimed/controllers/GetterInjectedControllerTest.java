@@ -1,5 +1,6 @@
 package com.lntellimed.controllers;
 
+import com.lntellimed.controllers.GetterInjectedController;
 import com.lntellimed.services.GreetingServiceImpl;
 import org.junit.Before;
 import org.junit.Test;
