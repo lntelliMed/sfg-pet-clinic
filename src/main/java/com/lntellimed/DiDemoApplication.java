@@ -5,6 +5,7 @@ import com.lntellimed.controllers.GetterInjectedController;
 import com.lntellimed.controllers.MyController;
 import com.lntellimed.controllers.PropertyInjectedController;
 import com.lntellimed.examplebeans.FakeDataSource;
+import com.lntellimed.examplebeans.FakeJmsBroker;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -25,5 +26,8 @@ public class DiDemoApplication {
 		
 		FakeDataSource fakeDataSource = (FakeDataSource) ctx.getBean(FakeDataSource.class);
  		System.out.println(fakeDataSource.getUser());
+ 		
+ 		FakeJmsBroker fakeJmsBroker = (FakeJmsBroker) ctx.getBean(FakeJmsBroker.class);
+ 		System.out.println(fakeJmsBroker.getUsername());
 	}
 }
