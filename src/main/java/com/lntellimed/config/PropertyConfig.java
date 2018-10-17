@@ -15,11 +15,11 @@ import org.springframework.core.env.Environment;
 @Configuration
 // @PropertySource({"classpath:datasource.properties",
 // "classpath:jms.properties"})
-@PropertySources({ @PropertySource("classpath:datasource.properties"), @PropertySource("classpath:jms.properties") })
+//@PropertySources({ @PropertySource("classpath:datasource.properties"), @PropertySource("classpath:jms.properties") })
 public class PropertyConfig {
 
-	@Autowired
-	Environment env;
+//	@Autowired
+//	Environment env;
 
 	@Value("${db.username}")
 	String user;
@@ -43,11 +43,11 @@ public class PropertyConfig {
 	public FakeDataSource fakeDataSource() {
 		FakeDataSource fakeDataSource = new FakeDataSource();
 		fakeDataSource.setUser(user);
-		if (env.getProperty("DB_PASSWORD") == null) {
+//		if (env.getProperty("DB_PASSWORD") == null) {
 			fakeDataSource.setPassword(password);
-		} else {
-			fakeDataSource.setPassword(env.getProperty("DB_PASSWORD"));
-		}
+//		} else {
+//			fakeDataSource.setPassword(env.getProperty("DB_PASSWORD"));
+//		}
 
 		fakeDataSource.setUrl(url);
 		return fakeDataSource;
@@ -62,9 +62,9 @@ public class PropertyConfig {
 		return jmsBroker;
 	}
 
-	@Bean
-	public static PropertySourcesPlaceholderConfigurer properties() {
-		PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer = new PropertySourcesPlaceholderConfigurer();
-		return propertySourcesPlaceholderConfigurer;
-	}
+//	@Bean
+//	public static PropertySourcesPlaceholderConfigurer properties() {
+//		PropertySourcesPlaceholderConfigurer propertySourcesPlaceholderConfigurer = new PropertySourcesPlaceholderConfigurer();
+//		return propertySourcesPlaceholderConfigurer;
+//	}
 }
