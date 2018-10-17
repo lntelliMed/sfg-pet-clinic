@@ -1,0 +1,5 @@
+lntellimed:
+  jms:
+    username: JMSUsername
+    password: somepass
+    url: SomeUrl
