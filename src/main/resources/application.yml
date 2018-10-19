@@ -3,3 +3,11 @@ lntellimed:
     username: JMSUsername
     password: somepass
     url: SomeUrl
+
+
+---
+spring:
+    profiles: de
+lntellimed:
+  jms:
+    username: JMSUsername $$$$$$ German
